@@ -1,0 +1,106 @@
+# zad 1
+
+# def linijka_po_linijce(sciezka_do_pliku):
+#     k = 0
+#     m = 0
+#     zarobki = 0
+#     try:
+#         with open(sciezka_do_pliku, 'r') as plik:
+#             for linijka in plik:
+#                 inf = linijka.strip()
+#                 inf = inf.split('-')
+#                 if inf[4] == "Kobieta":
+#                     k += 1
+#                 elif inf[4] == "Mezczyzna":
+#                     m += 1  
+
+
+#     except FileNotFoundError:
+#         print("Ups! Nie mogę znaleźć pliku. Sprawdź ścieżkę.")
+
+
+#     print(f"mezczyzni - {m} kobiety - {k}")
+
+
+
+
+# linijka_po_linijce("xxx.txt")
+
+#zad 2
+
+# def linijka_po_linijce(sciezka_do_pliku):
+#    k = 0
+#    zarobki = 0
+#    try:
+#        with open(sciezka_do_pliku, 'r') as plik:
+#            for linijka in plik:
+#                inf = linijka.strip()
+#                inf = inf.split('-')
+#                if inf[4] == "Kobieta":
+#                    k += 1
+#                    if inf[5] == "Singiel":
+#                     zarobki += float(inf[3])
+
+
+#    except FileNotFoundError:
+#        print("Ups! Nie mogę znaleźć pliku. Sprawdź ścieżkę.")
+
+
+#    print(zarobki/k)
+
+
+
+
+# linijka_po_linijce("xxx.txt")
+
+# zad 3
+
+# def linijka_po_linijce(sciezka_do_pliku):
+#    l = 0
+#    try:
+#        with open(sciezka_do_pliku, 'r') as plik:
+#            for linijka in plik:
+#                inf = linijka.strip()
+#                inf = inf.split('-')
+#                for i in range(6):
+#                     if inf[i] == "Hello World":
+#                         l += 1
+                   
+
+
+#    except FileNotFoundError:
+#        print("Ups! Nie mogę znaleźć pliku. Sprawdź ścieżkę.")
+
+
+#    print(l)
+
+
+
+
+# linijka_po_linijce("xxx.txt")
+
+# zad 4
+
+def linijka_po_linijce(sciezka_do_pliku):
+    lst = []
+    try:
+        with open(sciezka_do_pliku, 'r') as plik:
+            for linijka in plik:
+                inf = linijka.strip()
+                inf = inf.split('-')
+                if float(inf[6]) > 40 and inf[5] == "Singiel" and float(inf[3]) > 5000:
+                    lst.append(inf)
+                    
+                    
+
+
+    except FileNotFoundError:
+        print("Ups! Nie mogę znaleźć pliku. Sprawdź ścieżkę.")
+    print(lst)
+
+
+
+
+
+
+linijka_po_linijce("xxx.txt")
